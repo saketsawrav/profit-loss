@@ -21,11 +21,11 @@ function calculateProfitAndLoss (initial, quantity, current) {
     if (initial > current) {
         var profit = (initial - current) * quantity;
         var profitPercentage = (profit/current) * 100;
-        displayOutput('Yay! you made a profit of ' + profit + ' in your investment with a profit percentage of ' + profitPercentage + '%');
+        displayOutput('Yay! you made a profit of ' + profit + ' in your investment with a profit percentage of ' + Number.parseFloat(profitPercentage).toFixed(2) + '%'); // make sure to parse the percentage to just 2 digits
     } else if (current > initial) {
         var loss = (current - initial) * quantity;
         var lossPercentage = (loss/current) * 100;
-        displayOutput('Oh no! you made a loss of ' + loss + ' in your investment with a loss percentage of ' + lossPercentage + '%');  
+        displayOutput('Oh no! you made a loss of ' + loss + ' in your investment with a loss percentage of ' + Number.parseFloat(lossPercentage).toFixed(2) + '%');  // make sure to parse the percentage to just 2 digits
     } else {
         displayOutput('Seems like you still have what you invested.');
     }

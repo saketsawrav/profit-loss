@@ -1,0 +1,14 @@
+body {
+    text-align: center;
+}
+
+label {
+    display: block;
+}
+
+button {
+    margin-top: 10px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}

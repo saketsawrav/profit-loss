@@ -27,7 +27,7 @@ function calculateProfitAndLoss (initial, quantity, current) {
         var lossPercentage = (loss/current) * 100;
         displayOutput('loss', 'Oh no! you made a loss of ' + loss + ' in your investment with a loss percentage of ' + Number.parseFloat(lossPercentage).toFixed(2) + '%');  // make sure to parse the percentage to just 2 digits
     } else {
-        displayOutput('Seems like you still have what you invested.');
+        displayOutput('default', 'Seems like you still have what you invested.');
     }
 }
 
@@ -43,6 +43,7 @@ function displayOutput(status, message) {
             outputBox.style.color = "red";
             break;
         default:
+            outputBox.style.color = "aliceblue"
             break;
     }
     outputBox.innerHTML = message;

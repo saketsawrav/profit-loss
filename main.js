@@ -10,7 +10,11 @@ function submitHandler() {
     var initialP = Number(initialPrice.value);
     var quantitySt = Number(quantityStocks.value);
     var currPrice = Number(currentPrice.value);
-    calculateProfitAndLoss(initialP, quantitySt, currPrice);
+    if (initialP === 0 || quantitySt === 0 || currPrice === 0) {
+        displayOutput("The input field cannot be empty, enter value to proceed")
+    } else {
+        calculateProfitAndLoss(initialP, quantitySt, currPrice);
+    }
 }
 
 function calculateProfitAndLoss (initial, quantity, current) {

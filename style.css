@@ -21,13 +21,24 @@ body {
     color: aliceblue;
 }
 
+h1 {
+    padding-top: 20px;
+}
+
 p {
-    font-weight: 600;
+    padding: 10px;
+    font-weight: 700;
 }
 
 label {
     display: block;
-    font-weight: 500;
+    font-weight: 600;
+    padding: 10px;
+}
+
+input {
+    border-radius: 1rem;
+    padding: 5px;
 }
 
 button {
@@ -35,6 +46,8 @@ button {
     display: block;
     margin-right: auto;
     margin-left: auto;
+    padding: 6px;
+    border-radius: 0.5rem;
 }
 
 #output-box {
@@ -43,4 +56,5 @@ button {
     margin-left: auto;
     padding: 10px;
     margin-top: 10px;
+    font-weight: 800;
 }

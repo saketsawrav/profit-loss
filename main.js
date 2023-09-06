@@ -18,8 +18,8 @@ function submitHandler() {
 }
 
 function calculateProfitAndLoss (initial, quantity, current) {
-    if (initial > current) {
-        var profit = (initial - current) * quantity;
+    if (initial < current) {
+        var profit = (current - initial) * quantity;
         var profitPercentage = (profit/current) * 100;
         displayOutput('profit', 'Yay! you made a profit of ' + profit + ' in your investment with a profit percentage of ' + Number.parseFloat(profitPercentage).toFixed(2) + '%'); // make sure to parse the percentage to just 2 digits
     } else if (current > initial) {

@@ -22,7 +22,7 @@ function calculateProfitAndLoss (initial, quantity, current) {
         var profit = (current - initial) * quantity;
         var profitPercentage = (profit/current) * 100;
         displayOutput('profit', 'Yay! you made a profit of ' + profit + ' in your investment with a profit percentage of ' + Number.parseFloat(profitPercentage).toFixed(2) + '%'); // make sure to parse the percentage to just 2 digits
-    } else if (current > initial) {
+    } else if (current < initial) {
         var loss = (current - initial) * quantity;
         var lossPercentage = (loss/current) * 100;
         displayOutput('loss', 'Oh no! you made a loss of ' + loss + ' in your investment with a loss percentage of ' + Number.parseFloat(lossPercentage).toFixed(2) + '%');  // make sure to parse the percentage to just 2 digits
